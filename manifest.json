@@ -1,0 +1,24 @@
+{
+  "name": "CNBC News Extractor",
+  "version": "1.0",
+  "description": "Extracts news article header and body from CNBC.com and passes it to an API",
+  "manifest_version": 2,
+  "permissions": [
+    "activeTab",
+    "http://*/*",
+    "https://*/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.cnbc.com/*"
+      ],
+      "js": [
+        "content.js"
+      ]
+    }
+  ],
+  "browser_action": {
+    "default_popup": "popup.html"
+}
+}
