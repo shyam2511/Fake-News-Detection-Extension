@@ -7,11 +7,6 @@ document.getElementById("extract").addEventListener("click", function () {
       console.log("this works");
       xhr.setRequestHeader("Content-Type", "application/json");
       console.log(response);
-      xhr.onreadystatechange = function () {
-        if (xhr.readyState == 4 && xhr.status == 200) {
-          console.log(xhr.responseText);
-        }
-      };
       xhr.send(JSON.stringify(response));
     });
   });

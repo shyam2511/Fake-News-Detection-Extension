@@ -1,93 +1,85 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Fake News Detection</title>
+  <link href="./css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="./css/all-min.css">
   <style>
-    /* Set global styles for the page */
     body {
       font-family: Arial, sans-serif;
       font-size: 16px;
       line-height: 1.5;
       margin: 0;
-      padding: 0;
-      background-color: #f7f7f7;
+      padding: 10px;
+      background-color: #f1f5f9;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      /* min-height: 400px; */
+      width: 400px;
     }
 
-    /* Style the container */
-    .container {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 20px;
-      background-color: #fff;
-      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-      border-radius: 4px;
-    }
-
-    /* Style the heading */
     h1 {
-      font-size: 36px;
+      font-size: 24px;
       font-weight: bold;
       margin: 0 0 20px;
-      color: #0072c6;
-      text-align: center;
+      color: #4a5568;
     }
 
-    /* Style the paragraph text */
     p {
-      margin: 0 0 20px;
-      color: #333;
-      text-align: center;
+      margin: 0 0 10px;
+      color: #6c757d;
     }
 
-    /* Style the button */
-    button {
-      display: block;
-      margin: 0 auto;
-      padding: 12px 30px;
-      background-color: #0072c6;
+    .btn-primary {
+      padding: 10px 20px;
+      background-color: #4a5568;
       color: #fff;
       border: none;
       border-radius: 4px;
       cursor: pointer;
-      font-size: 18px;
+      font-size: 16px;
       font-weight: bold;
       transition: background-color 0.3s;
     }
 
-    /* Style the button on hover */
-    button:hover {
-      background-color: #004f8a;
+    .btn-primary:hover {
+      background-color: #2d3748;
     }
 
-    /* Apply media queries for responsive design */
-    @media screen and (max-width: 768px) {
-      .container {
-        padding: 10px;
-      }
+    .card {
+      border: none;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      border-radius: 8px;
+      background-color: #ffffff;
+    }
 
-      h1 {
-        font-size: 28px;
-      }
-
-      p {
-        font-size: 14px;
-      }
-
-      button {
-        font-size: 16px;
-      }
+    .icon {
+      font-size: 48px;
+      color: #4a5568;
+      margin-bottom: 20px;
     }
   </style>
 </head>
 
 <body>
-  <div class="container">
-    <h1>Fake News Detection</h1>
-    <p>Check the authenticity of the article by clicking the button below</p>
-    <button id="extract">Extract article</button>
+  <div class="card">
+    <div class="text-center">
+      <i class="icon fas fa-exclamation-triangle"></i>
+    </div>
+    <h1 class="card-title text-center">Fake News Detection</h1>
+    <p class="card-text text-center">Verify the authenticity of the article you're reading with just one click.</p>
+    <div class="d-grid gap-2">
+      <button id="extract" class="btn btn-primary">Extract article</button>
+    </div>
+    <p class="card-text text-center mt-3">Stay informed and avoid misinformation with our Fake News Detection extension.
+    </p>
   </div>
-
   <script src="popup.js"></script>
 </body>
 
