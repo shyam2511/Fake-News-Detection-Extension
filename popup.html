@@ -5,17 +5,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Fake News Detection</title>
+  <link href="https://fonts.googleapis.com/css?family=Source Sans Pro" rel="stylesheet">
   <script src="https://kit.fontawesome.com/d7a6b66989.js" crossorigin="anonymous"></script>
   <link href="./css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Source Sans Pro', sans-serif;
       font-size: 16px;
       line-height: 1.5;
       margin: 0;
       padding: 5px;
-      background-color: #f1f5f9;
+      background: linear-gradient(to top, #838d96, #314466);
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -44,7 +45,7 @@
       border-radius: 4px;
       cursor: pointer;
       font-size: 16px;
-      font-weight: bold;
+      font-weight: regular;
       transition: background-color 0.3s;
     }
 
@@ -57,11 +58,11 @@
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
       padding: 15px;
       border-radius: 8px;
-      background-color: #ffffff;
+      background: linear-gradient(to right, #ffffff, #d5dce9);
     }
 
     .icon {
-      font-size: 48px;
+      font-size: 64px;
       color: #4a5568;
       margin-bottom: 40px;
     }
@@ -70,15 +71,15 @@
 
 <body>
   <div class="card">
-    <div class="text-center">
-      <i class="fa-sharp fa-solid fa-triangle-exclamation"></i>
-    </div>
-    <h1 class="card-title text-center">Fake News Detection</h1>
+    <!-- <div class="text-center">
+      <i class="fa-solid fa-triangle-exclamation"></i>
+    </div> -->
+    <h1 class="card-title text-center">TruthTracker</h1>
     <p class="card-text text-center">Verify the authenticity of the article you're reading with just one click.</p>
     <div class="d-grid gap-2">
       <button id="extract" class="btn btn-primary">Extract article</button>
     </div>
-    <p class="card-text text-center mt-3">Stay informed and avoid misinformation with our Fake News Detection extension.
+    <p class="card-text text-center mt-3">Stay informed and avoid misinformation with our extension.
     </p>
   </div>
   <script src="popup.js"></script>
