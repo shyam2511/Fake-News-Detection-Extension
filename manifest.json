@@ -1,5 +1,5 @@
 {
-  "name": "CNBC News Extractor",
+  "name": "TruthTracker",
   "version": "1.0",
   "description": "Extracts news article header and body from CNBC.com and passes it to an API",
   "manifest_version": 2,
