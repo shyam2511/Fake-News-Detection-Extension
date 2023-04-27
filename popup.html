@@ -18,9 +18,9 @@
       background: linear-gradient(to bottom, #2d3748, #23293c);
       display: flex;
       flex-direction: column;
-      align-items: center;
+      align-items: space-around;
       justify-content: center;
-      min-height: 500px;
+      /* min-height: 500px; */
       width: 400px;
     }
 
@@ -67,18 +67,16 @@
     #prediction-result {
       display: none;
       /* Hide the prediction result container by default */
-      position: absolute;
-      top: 100%;
-      left: 50%;
-      transform: translateX(-50%);
-      margin-top: 20px;
+      position: relative;
+      /* center the container using relative positioning and not transform */
+      text-align: center;
       /* Add margin-top to create spacing */
     }
 
     #result-text {
       font-size: 20px;
       font-weight: bold;
-      margin: 0 0 20px;
+      margin: 0 0 10px;
       color: #bb303c;
     }
 
@@ -102,12 +100,12 @@
       </button>
     </div>
     <p class="card-text text-center mt-3">Stay informed and avoid misinformation with our extension. </p>
-    <!-- Prediction result container -->
-    <div class="card">
-      <div id="prediction-result">
-        <p id="result-text">Prediction:</p>
-        <p id="result-value"></p>
-      </div>
+  </div>
+  <!-- Prediction result container -->
+  <div class="card">
+    <div id="prediction-result" style="display: block;">
+      <p id="result-text">Prediction:</p>
+      <p id="result-value">Click on Extract!</p>
     </div>
   </div>
   <script src="popup.js"></script>
