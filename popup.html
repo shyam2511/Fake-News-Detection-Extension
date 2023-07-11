@@ -1,44 +1,113 @@
 <!DOCTYPE html>
+<html lang="en">
 
-  <head>
-    <title>Fake News Detection</title>
-    <style>
-      body {
-        
-        font-family: Arial, sans-serif;
-        font-size: 16px;
-        line-height: 1.5;
-        margin: 0;
-        padding: 10px;
-      }
-      button {
-        padding: 10px 20px;
-        background-color: #0072C6;
-        color: #fff;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-        font-size: 16px;
-        font-weight: bold;
-        transition: background-color 0.3s;
-      }
-      button:hover {
-        background-color: #004F8A;
-      }
-      h1 {
-        font-size: 24px;
-        font-weight: bold;
-        margin: 0 0 20px;
-      }
-      p {
-        margin: 0 0 10px;
-      }
-    </style>
-  </head>
-  <body>
-    <h1>Fake News Detection</h1>
-    <p>Click the button below to check the authenticity of the article</p>
-    <button id="extract">Extract article</button>
-    <script src="popup.js"></script>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fake News Detection</title>
+  <link href="https://fonts.googleapis.com/css?family=Source Sans Pro" rel="stylesheet">
+  <link href="./css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+  <style>
+    body {
+      font-family: 'Source Sans Pro', sans-serif;
+      font-size: 16px;
+      line-height: 1.5;
+      margin: 0;
+      padding: 5px;
+      background: linear-gradient(to bottom, #2d3748, #23293c);
+      display: flex;
+      flex-direction: column;
+      align-items: space-around;
+      justify-content: center;
+      /* min-height: 500px; */
+      width: 400px;
+    }
+
+    .card-title {
+      font-size: 24px;
+      font-weight: bold;
+      margin: 0 0 20px;
+      color: #bb303c;
+    }
+
+    p {
+      margin: 0 0 10px;
+      color: #a9c1d6;
+    }
+
+    .btn-primary {
+      padding: 10px 20px;
+      background-color: #bb303c;
+      color: #eef7f9;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: regular;
+      transition: background-color 0.3s;
+    }
+
+    .btn-primary:hover {
+      background-color: #2d3748;
+    }
+
+    .card {
+      border: none;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      padding: 15px;
+      border-radius: 8px;
+      background: linear-gradient(to right, #23293c, #23293c);
+      position: relative;
+      margin-bottom: 20px;
+      /* Add margin-bottom to create spacing */
+    }
+
+    /* Custom styling for prediction results */
+    #prediction-result {
+      display: none;
+      /* Hide the prediction result container by default */
+      position: relative;
+      /* center the container using relative positioning and not transform */
+      text-align: center;
+      /* Add margin-top to create spacing */
+    }
+
+    #result-text {
+      font-size: 20px;
+      font-weight: bold;
+      margin: 0 0 10px;
+      color: #bb303c;
+    }
+
+    #result-value {
+      font-size: 18px;
+      margin: 0;
+      color: #a9c1d6;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="card">
+    <h1 class="card-title text-center">TruthTracker</h1>
+    <p class="card-text text-center">Verify the authenticity of the article you're reading with just one click.</p>
+    <div class="d-grid gap-2">
+      <button id="extract" class="btn btn-primary">
+        <span id="button-text">Extract article</span>
+        <span id="loading" class="spinner-border spinner-border-sm ms-2" role="status" aria-hidden="true"
+          style="display: none;"></span>
+      </button>
+    </div>
+  </div>
+  <!-- Prediction result container -->
+  <div class="card">
+    <div id="prediction-result" style="display: block;">
+      <p id="result-text">Prediction:</p>
+      <p id="result-value">Click on Extract!</p>
+    </div>
+  </div>
+  <script src="popup.js"></script>
 </body>
+
 </html>
